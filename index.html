@@ -63,7 +63,7 @@
         </nav>
     </header>
 
-    <hr />
+
 
     <!-- Main Content -->
     <main>
@@ -74,7 +74,7 @@
                 offerings.</p>
         </section>
 
-        <hr />
+
 
         <!-- Our Profile Page -->
         <section id="our-profile-page" class="w-full bg-white py-20 px-6 md:px-12 lg:px-24">
@@ -166,7 +166,7 @@
             </div>
         </section>
 
-        <hr />
+
 
         <!-- Portfolio Page -->
         <section id="portfolio-page" class="bg-gray-50 py-20 px-4">
@@ -233,41 +233,55 @@
             </div>
         </section>
 
-        <hr />
+
 
         <!-- Message Us Page -->
-        <section id="message-us-page" class="mx-8">
-            <header>
-                <h2 class="text-xl font-bold">Message Us</h2>
-                <p class="mt-2">Have questions or want to work with us? Send us a message and we'll get back to you
-                    promptly.</p>
+        <section id="message-us-page" class="w-full flex flex-col items-center justify-center py-20 bg-white">
+            <header class="text-center mb-10 max-w-2xl px-4">
+                <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 tracking-tight">Message Us</h2>
+                <p class="mt-4 text-lg text-gray-500">Have questions or want to work with us? Send us a message and
+                    we'll get back to you promptly.</p>
             </header>
 
-            <form>
-                <div class="mb-4">
-                    <label class="block mb-2" for="name">Name:</label>
-                    <input class="w-full p-2 border rounded" type="text" id="name" name="name" required />
+            <form class="w-full max-w-lg bg-white p-8 rounded-2xl shadow-xl border border-gray-100">
+                <div class="mb-6">
+                    <label class="block mb-2 text-sm font-semibold text-gray-700" for="name">Name:</label>
+                    <input
+                        class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all duration-200 bg-gray-50 focus:bg-white"
+                        type="text" id="name" name="name" required />
                 </div>
-                <div class="mb-4">
-                    <label class="block mb-2" for="email">Email:</label>
-                    <input class="w-full p-2 border rounded" type="email" id="email" name="email" required />
+                <div class="mb-6">
+                    <label class="block mb-2 text-sm font-semibold text-gray-700" for="email">Email:</label>
+                    <input
+                        class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all duration-200 bg-gray-50 focus:bg-white"
+                        type="email" id="email" name="email" required />
                 </div>
-                <div class="mb-4">
-                    <label class="block mb-2" for="message">Message:</label>
-                    <textarea class="w-full p-2 border rounded" id="message" name="message" rows="5"
-                        required></textarea>
+                <div class="mb-6">
+                    <label class="block mb-2 text-sm font-semibold text-gray-700" for="message">Message:</label>
+                    <textarea
+                        class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all duration-200 bg-gray-50 focus:bg-white resize-y min-h-[120px]"
+                        id="message" name="message" rows="5" required></textarea>
                 </div>
                 <button id="message-submit-btn"
-                    class="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition-colors"
+                    class="w-full py-3.5 px-6 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-bold rounded-lg shadow-lg hover:shadow-xl hover:from-blue-700 hover:to-indigo-700 transform hover:-translate-y-0.5 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
                     type="button">Send Message</button>
             </form>
 
             <!-- Output Container -->
-            <div id="message-output" class="hidden mt-6 p-4 bg-green-50 border border-green-200 rounded-lg">
-                <h3 class="text-lg font-semibold text-green-800 mb-2">Message Submitted!</h3>
-                <p class="text-green-700"><strong>Name:</strong> <span id="output-name"></span></p>
-                <p class="text-green-700"><strong>Email:</strong> <span id="output-email"></span></p>
-                <p class="text-green-700"><strong>Message:</strong> <span id="output-message"></span></p>
+            <div id="message-output"
+                class="hidden w-full max-w-lg mt-8 p-6 bg-green-50 border border-green-200 rounded-xl shadow-sm animate-slide-up">
+                <h3 class="text-lg font-bold text-green-800 mb-3 flex items-center">
+                    <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                    </svg>
+                    Message Submitted!
+                </h3>
+                <div class="space-y-2 text-green-700">
+                    <p><strong class="font-semibold text-green-900">Name:</strong> <span id="output-name"></span></p>
+                    <p><strong class="font-semibold text-green-900">Email:</strong> <span id="output-email"></span></p>
+                    <p><strong class="font-semibold text-green-900">Message:</strong> <span id="output-message"></span>
+                    </p>
+                </div>
             </div>
         </section>
     </main>
@@ -304,7 +318,7 @@
 
     <!-- Footer Content -->
     <footer>
-        <hr />
+
         <p class="text-center p-4">© 2026 ANDRA. All rights reserved.</p>
     </footer>
 
