@@ -155,3 +155,39 @@ function initPortfolioEffects() {
 // Initialize portfolio effects
 document.addEventListener('DOMContentLoaded', initPortfolioEffects);
 
+// Scroll Reveal Logic using Intersection Observer
+function initScrollReveal() {
+    // Select elements to reveal
+    const revealElements = [
+        ...document.querySelectorAll('#home-page h2, #home-page p'),
+        ...document.querySelectorAll('#our-profile-page'),
+        ...document.querySelectorAll('#portfolio-page h2, .project-card, #portfolio-page img'),
+        ...document.querySelectorAll('#message-us-page header, #message-us-page form, #message-us-page p')
+    ];
+
+    // Add initial reveal class
+    revealElements.forEach(el => {
+        el.classList.add('scroll-reveal');
+    });
+
+    const revealObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                // Stop observing after animation triggers once
+                observer.unobserve(entry.target);
+            }
+        });
+    }, {
+        threshold: 0.15, // Trigger when 15% of element is visible
+        rootMargin: '0px 0px -50px 0px' // Slight offset to trigger before reaching center
+    });
+
+    revealElements.forEach(el => {
+        revealObserver.observe(el);
+    });
+}
+
+// Call initScrollReveal on load
+document.addEventListener('DOMContentLoaded', initScrollReveal);
+
