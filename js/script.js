@@ -128,32 +128,9 @@ function validateForm() {
 // Call validateForm on load
 document.addEventListener('DOMContentLoaded', validateForm);
 
-// Portfolio Hover Effects
-function initPortfolioEffects() {
-    const cards = document.querySelectorAll('.project-card');
 
-    cards.forEach(card => {
-        // Select the image inside the card
-        const img = card.querySelector('.project-img');
 
-        if (card && img) {
-            // Mouse Enter: Add effects
-            card.addEventListener('mouseenter', () => {
-                img.classList.add('hover-effect-zoom');
-                card.classList.add('hover-effect-shadow');
-            });
-
-            // Mouse Leave: Remove effects
-            card.addEventListener('mouseleave', () => {
-                img.classList.remove('hover-effect-zoom');
-                card.classList.remove('hover-effect-shadow');
-            });
-        }
-    });
-}
-
-// Initialize portfolio effects
-document.addEventListener('DOMContentLoaded', initPortfolioEffects);
+// Initialize portfolio effects - REMOVED: Handled by CSS
 
 // Scroll Reveal Logic using Intersection Observer
 function initScrollReveal() {
